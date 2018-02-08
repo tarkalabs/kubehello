@@ -36,4 +36,5 @@ func SayHello(rw http.ResponseWriter, req *http.Request) {
 func main() {
 	router := mux.NewRouter()
 	router.HandleFunc("/", SayHello)
+	_ = http.ListenAndServe(":4343", router)
 }
