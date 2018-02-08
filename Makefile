@@ -9,6 +9,6 @@ LDFLAGS=-ldflags "-X ${VERSION_PACKAGE}.Commit=${COMMIT} \
                   -X ${VERSION_PACKAGE}.State=${STATE} \
                   -X ${VERSION_PACKAGE}.TimeStamp=${TIMESTAMP}"
 linux:
-	CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o hellokube ${LDFLAGS} .
+	CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o kubehello ${LDFLAGS} .
 mac:
-	CGO_ENABLED=0 GOOS=darwin go build -a -installsuffix cgo -o hellokube ${LDFLAGS} .
+	CGO_ENABLED=0 GOOS=darwin go build -a -installsuffix cgo -o kubehello ${LDFLAGS} .
